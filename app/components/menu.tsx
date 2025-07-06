@@ -26,7 +26,9 @@ export default function Menu() {
         <Link href={item.path} key={item.path}>
           <li
             className={`${
-              path === item.path ? "text-white" : "text-slate-500"
+              path === item.path
+                ? "text-slate-500 dark:text-white"
+                : "dark:text-slate-500"
             } hover:underline hover:underline-offset-8`}
           >
             {item.label}

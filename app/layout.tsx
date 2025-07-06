@@ -39,7 +39,7 @@ export default function RootLayout({
             <Menu />
           </header>
           <div className="flex flex-col justify-between pt-0 md:pt-8 p-8">
-            <main className="md:w-xl max-w-[60ch] w-full space-y-6 overflow-hidden">
+            <main className="md:w-xl max-w-[60ch] w-full space-y-6 text-balance">
               {children}
             </main>
           </div>

@@ -1,7 +1,7 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @theme {
-  --font-family-sans: 'Inter', sans-serif;
+  --font-family-sans: "Inter", sans-serif;
 }
 
 :root {
@@ -50,7 +50,7 @@ pre {
 }
 
 code {
-  font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+  font-family: "Menlo", "Monaco", "Courier New", monospace;
   font-size: 14px;
   padding: 0.2em 0.4em;
   border-radius: 0.3em;
@@ -76,7 +76,7 @@ code:not(pre code) span {
 
 @media (prefers-color-scheme: dark) {
   code {
-    font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+    font-family: "Menlo", "Monaco", "Courier New", monospace;
     font-size: 14px;
     padding: 0.2em 0.4em;
     border-radius: 0.3em;
@@ -97,8 +97,8 @@ hr {
 }
 
 /* Remove Safari input shadow on mobile */
-input[type='text'],
-input[type='email'] {
+input[type="text"],
+input[type="email"] {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -110,4 +110,8 @@ table {
   overflow-x: auto;
   white-space: nowrap;
   text-align: left;
+}
+
+a {
+  text: wrap;
 }
