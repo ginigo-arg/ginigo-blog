@@ -2,6 +2,8 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
+import Link from "next/link";
+import Menu from "./components/menu";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -31,14 +33,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.className}`}>
-      <body className="antialiased tracking-tight">
-        <div className="min-h-screen flex flex-col justify-between pt-0 md:pt-8 p-8 dark:bg-slate-950 bg-white text-gray-900 dark:text-zinc-200">
-          <main className="max-w-[60ch] mx-auto w-full space-y-6">
-            {children}
-          </main>
-          <Footer />
-          <Analytics />
+      <body className="antialiased tracking-tight  dark:bg-slate-950 bg-white text-gray-900 dark:text-zinc-200">
+        <div className="flex flex-col-reverse sm:flex-row-reverse justify-center">
+          <header className="h-[100px] sm:pt-20 pl-10">
+            <Menu />
+          </header>
+          <div className="flex flex-col justify-between pt-0 md:pt-8 p-8">
+            <main className="md:w-xl max-w-[60ch] w-full space-y-6 overflow-hidden">
+              {children}
+            </main>
+          </div>
         </div>
+        <Footer />
+        <Analytics />
       </body>
     </html>
   );
